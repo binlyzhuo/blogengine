@@ -13,10 +13,11 @@
   <showdescriptioninpostlist>False</showdescriptioninpostlist>
   <commentsperpage>10</commentsperpage>
   <feedauthor />
-  <description>Short description of the blog</description>
+  <description>记录生活工作的点点滴滴</description>
   <enablepingbacksend>True</enablepingbacksend>
   <enabletagexport>True</enabletagexport>
   <commentblacklistcount>3</commentblacklistcount>
+  <iscocommentenabled>False</iscocommentenabled>
   <compresswebresource>False</compresswebresource>
   <commentwhitelistcount>2</commentwhitelistcount>
   <addiptowhitelistfilteronapproval>False</addiptowhitelistfilteronapproval>
@@ -55,7 +56,7 @@
   <enablereferrertracking>False</enablereferrertracking>
   <disquswebsitename />
   <handlewwwsubdomain />
-  <culture>Auto</culture>
+  <culture>zh-CN</culture>
   <postsperfeed>3</postsperfeed>
   <sendmailoncomment>True</sendmailoncomment>
   <enablerecaptchaoncontactform>False</enablerecaptchaoncontactform>
@@ -79,7 +80,7 @@
   <addiptoblacklistfilteronrejection>False</addiptoblacklistfilteronrejection>
   <timezone>0</timezone>
   <enableoptimization>False</enableoptimization>
-  <name>Name of the blog</name>
+  <name>小卓博客</name>
   <moderationtype>Auto</moderationtype>
   <enablepingbackreceive>True</enablepingbackreceive>
   <showlivepreview>True</showlivepreview>
