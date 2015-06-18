@@ -157,6 +157,7 @@
     <Compile Include="Data\Contracts\ICommentFilterRepository.cs" />
     <Compile Include="Data\Contracts\ICustomFieldRepository.cs" />
     <Compile Include="Data\Contracts\IFileManagerRepository.cs" />
+    <Compile Include="Data\Contracts\IFriendLinkRepository.cs" />
     <Compile Include="Data\Contracts\IRolesRepository.cs" />
     <Compile Include="Data\Contracts\IUsersRepository.cs" />
     <Compile Include="Data\CustomFieldRepository.cs" />
@@ -177,6 +178,7 @@
     <Compile Include="Data\Contracts\ITrashRepository.cs" />
     <Compile Include="Data\CustomFilterRepository.cs" />
     <Compile Include="Data\FileManagerRepository.cs" />
+    <Compile Include="Data\FriendLinkRepository.cs" />
     <Compile Include="Data\LookupsRepository.cs" />
     <Compile Include="Data\Models\Blog.cs" />
     <Compile Include="Data\Models\BlogItem.cs" />
@@ -187,6 +189,7 @@
     <Compile Include="Data\Models\CustomFilter.cs" />
     <Compile Include="Data\Models\Enums.cs" />
     <Compile Include="Data\Models\CustomField.cs" />
+    <Compile Include="Data\Models\FriendLink.cs" />
     <Compile Include="Data\Models\JsonResponse.cs" />
     <Compile Include="Data\Models\Lookups.cs" />
     <Compile Include="Data\Models\Package.cs" />

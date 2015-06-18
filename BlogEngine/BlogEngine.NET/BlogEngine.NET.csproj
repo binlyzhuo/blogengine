@@ -564,6 +564,7 @@
     <Content Include="Custom\Themes\Standard-2014\WidgetContainer.ascx" />
     <Content Include="Custom\Themes\Standard\css\styles.css" />
     <Content Include="Custom\Themes\Standard\fonts\fontello.svg" />
+    <Content Include="Custom\Widgets\FriendLink\widget.ascx" />
     <Content Include="Custom\Widgets\Post List\edit.ascx" />
     <Content Include="Custom\Widgets\Post List\widget.ascx" />
     <Content Include="Custom\Widgets\Post List\widget.xml" />
@@ -1522,7 +1523,9 @@
     <Content Include="App_Data\newsletter.xml" />
     <Content Include="App_Data\packagefiles.xml" />
     <Content Include="App_Data\packages.xml" />
-    <Content Include="App_Data\pages\5d484c1c-d1f1-4be4-938a-f55bf24bf6ba.xml" />
+    <Content Include="App_Data\pages\5d484c1c-d1f1-4be4-938a-f55bf24bf6ba.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\pingservices.xml" />
     <Content Include="App_Data\profiles\admin.xml" />
     <Content Include="App_Data\rights.xml" />
@@ -2144,6 +2147,13 @@
     </Compile>
     <Compile Include="Custom\Themes\Standard-2014\site.master.designer.cs">
       <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Widgets\FriendLink\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom\Widgets\FriendLink\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
     </Compile>
     <Compile Include="Custom\Widgets\Post List\edit.ascx.cs">
       <DependentUpon>edit.ascx</DependentUpon>
