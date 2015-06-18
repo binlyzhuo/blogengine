@@ -41,6 +41,10 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\..\lib\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.Unity">
       <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
@@ -267,6 +271,7 @@
     <Content Include="admin\editors\tinymce\skins\lightgray\fonts\tinymce.eot" />
     <Content Include="admin\editors\tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <Content Include="admin\editors\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="App_Data\log4net.config" />
     <None Include="App_Data\PublishProfiles\be.pubxml" />
     <None Include="App_Data\PublishProfiles\bespa - FTP.pubxml" />
     <None Include="App_Data\PublishProfiles\bespa - Web Deploy.pubxml" />
