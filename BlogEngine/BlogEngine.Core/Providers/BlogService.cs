@@ -148,11 +148,6 @@ namespace BlogEngine.Core.Providers
             Provider.DeleteCategory(category);
         }
 
-        public static void DeleteFriendLink(FriendLink friendlink)
-        {
-            Provider.DeleteFriendLink(friendlink);
-        }
-
         /// <summary>
         /// Deletes the specified Page from the current provider.
         /// </summary>
@@ -206,11 +201,6 @@ namespace BlogEngine.Core.Providers
         public static List<Category> FillCategories(Blog blog)
         {
             return Provider.FillCategories(blog);
-        }
-
-        public static List<FriendLink> FillFriendLinks(Blog blog)
-        {
-            return Provider.FillFriendLinks(blog);
         }
 
         /// <summary>
@@ -317,11 +307,6 @@ namespace BlogEngine.Core.Providers
         public static void InsertCategory(Category category)
         {
             Provider.InsertCategory(category);
-        }
-
-        public static void InsertFriendLink(FriendLink friendLink)
-        {
-            Provider.InsertFriendLink(friendLink);
         }
 
         /// <summary>
@@ -507,11 +492,6 @@ namespace BlogEngine.Core.Providers
             return Provider.SelectCategory(id);
         }
 
-        public static FriendLink SelectFriendLink(Guid id)
-        {
-            return Provider.SelectFriendLink(id);
-        }
-
         /// <summary>
         /// Returns a Page based on the specified id.
         /// </summary>
@@ -607,11 +587,6 @@ namespace BlogEngine.Core.Providers
         public static void UpdateCategory(Category category)
         {
             Provider.UpdateCategory(category);
-        }
-
-        public static void UpdateFriendLink(FriendLink friendlink)
-        {
-            Provider.UpdateFriendLink(friendlink);
         }
 
         /// <summary>

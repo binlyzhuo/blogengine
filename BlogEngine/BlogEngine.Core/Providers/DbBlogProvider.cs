@@ -300,13 +300,6 @@ namespace BlogEngine.Core.Providers
             }
         }
 
-        public override void DeleteFriendLink(FriendLink friendlink)
-        {
-
-        }
-
-        
-
         /// <summary>
         /// Deletes a page from the database
         /// </summary>
@@ -517,45 +510,6 @@ namespace BlogEngine.Core.Providers
             }
 
             return categories;
-        }
-
-        /// <summary>
-        /// get friendlinks
-        /// </summary>
-        /// <param name="blog"></param>
-        /// <returns></returns>
-        public override List<FriendLink> FillFriendLinks(Blog blog)
-        {
-            var friendlinks = new List<FriendLink>();
-
-            using (var conn = this.CreateConnection())
-            {
-                if (conn.HasConnection)
-                {
-                    using (var cmd = conn.CreateTextCommand(string.Format("SELECT LinkID,Name,Url,KeyWords,LinkMan,AddDate,AddUserID,BlogID FROM {0}FriendLink WHERE BlogId = {1}blogid", this.tablePrefix, this.parmPrefix)))
-                    {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), blog.Id.ToString()));
-
-                        using (var rdr = cmd.ExecuteReader())
-                        {
-                            while (rdr.Read())
-                            {
-                                Guid linkid = Guid.Parse(rdr.GetString(0));
-                                string name = rdr.GetString(1);
-                                string url = rdr.GetString(2);
-                                string keywords = rdr.GetString(3);
-                                string contact = rdr.GetString(4);
-
-                                var cat = new FriendLink(name, url, keywords, contact, linkid);
-                                friendlinks.Add(cat);
-                                cat.MarkOld();
-                            }
-                        }
-                    }
-                }
-            }
-
-            return friendlinks;
         }
 
         /// <summary>
@@ -867,39 +821,6 @@ namespace BlogEngine.Core.Providers
                         parms.Add(conn.CreateParameter(FormatParamName("description"), category.Description));
                         parms.Add(conn.CreateParameter(FormatParamName("parentid"), (category.Parent == null ? (object)DBNull.Value : category.Parent.ToString())));
 
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        /// insert blog friendlinks
-        /// </summary>
-        /// <param name="friendlink"></param>
-        public override void InsertFriendLink(FriendLink friendlink)
-        {
-            var friendlinks = FriendLink.FriendLinks;
-            friendlinks.Add(friendlink);
-            //friendlinks.Sort();
-
-            using (var conn = this.CreateConnection())
-            {
-                if (conn.HasConnection)
-                {
-                    var sqlQuery = string.Format("INSERT INTO {0}FriendLink (Linkid,Name,Url,KeyWords,LinkMan,AddDate,AddUserID,Blogid) VALUES ({1}linkid,{1}name, {1}url, {1}keywords,{1}linkman, {1}adddate, {1}userid,{1}blogid)", this.tablePrefix, this.parmPrefix);
-
-                    using (var cmd = conn.CreateTextCommand(sqlQuery))
-                    {
-                        var parms = cmd.Parameters;
-                        parms.Add(conn.CreateParameter(FormatParamName("linkid"), friendlink.Id));
-                        parms.Add(conn.CreateParameter(FormatParamName("name"), friendlink.Name));
-                        parms.Add(conn.CreateParameter(FormatParamName("url"), friendlink.Url));
-                        parms.Add(conn.CreateParameter(FormatParamName("keywords"), friendlink.KeyWords));
-                        parms.Add(conn.CreateParameter(FormatParamName("linkman"), friendlink.Contact));
-                        parms.Add(conn.CreateParameter(FormatParamName("adddate"), DateTime.Now));
-                        parms.Add(conn.CreateParameter(FormatParamName("userid"), "0"));
-                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -1439,11 +1360,6 @@ namespace BlogEngine.Core.Providers
 
             category.MarkOld();
             return category;
-        }
-
-        public override FriendLink SelectFriendLink(Guid id)
-        {
-            return null;
         }
 
         /// <summary>
@@ -2292,11 +2208,6 @@ namespace BlogEngine.Core.Providers
                     }
                 }
             }
-        }
-
-        public override void UpdateFriendLink(FriendLink friendlink)
-        {
-
         }
 
         /// <summary>

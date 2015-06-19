@@ -49,8 +49,6 @@
         /// </param>
         public abstract void DeleteCategory(Category category);
 
-        public abstract void DeleteFriendLink(FriendLink friendlink);
-
         /// <summary>
         /// Deletes a Page from the data store specified by the provider.
         /// </summary>
@@ -155,8 +153,6 @@
         /// The category.
         /// </param>
         public abstract void InsertCategory(Category category);
-
-        public abstract void InsertFriendLink(FriendLink friendlink);
 
         /// <summary>
         /// Inserts a new Page into the data store specified by the provider.
@@ -294,8 +290,6 @@
         /// <returns>A Category.</returns>
         public abstract Category SelectCategory(Guid id);
 
-        public abstract FriendLink SelectFriendLink(Guid id);
-
         /// <summary>
         /// Retrieves a Page from the provider based on the specified id.
         /// </summary>
@@ -365,8 +359,6 @@
         /// The category to update.
         /// </param>
         public abstract void UpdateCategory(Category category);
-
-        public abstract void UpdateFriendLink(FriendLink friendlink);
 
         /// <summary>
         /// Updates an existing Page in the data store specified by the provider.
@@ -480,9 +472,6 @@
 
         #endregion
 
-        #region friendlinks
-        #endregion
-        public abstract List<FriendLink> FillFriendLinks(Blog blog);
         #endregion
     }
 }

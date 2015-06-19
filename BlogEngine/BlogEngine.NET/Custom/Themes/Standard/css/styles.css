@@ -149,7 +149,7 @@ textarea.form-control { height: auto; }
 .container:after { clear: both; content: ""; }
 
 /*[03]*/
-.header { padding: 15px 0; margin-bottom: 20px; background-color: #222; color: #aaa; }
+.header { padding: 60px 0; margin-bottom: 30px; background-color: #222; color: #aaa; }
 .header a { color: #fff; }
 .header a:hover { color: #ccc; }
 

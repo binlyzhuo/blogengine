@@ -39,8 +39,6 @@ namespace BlogEngine.Core.Data
 
             LoadThemes();
 
-            LoadFriendLinks();
-
             return lookups;
         }
 
@@ -151,16 +149,6 @@ namespace BlogEngine.Core.Data
                 items.Add(new SelectOption { OptionName = pkg.Title, OptionValue = pkg.Id.ToString() });
             }
             lookups.InstalledThemes = items;
-        }
-
-        void LoadFriendLinks()
-        {
-            var cats = new List<SelectOption>();
-            foreach (var cat in FriendLink.FriendLinks)
-            {
-                cats.Add(new SelectOption { OptionName = cat.Name, OptionValue = cat.Id.ToString() });
-            }
-            lookups.FriendLinks = cats;
         }
 
     }

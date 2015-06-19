@@ -136,7 +136,30 @@
                 </div>
             </div>
             <div class="col col-xs-12 col-sm-6 col-md-4">
-                
+                <div data-ng-if="security.showTabCustom" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapseSix">{{lbl.latestFromTheGallery}}</a>
+                        </h4>
+                    </div>
+                    <ul class="list-group list-group panel-collapse collaps in" id="collapseSix">
+                        <li class="list-group-item clearfix" data-ng-repeat="pkg in packages">
+                            <div class="pull-left">
+                                <a href="#/custom/packages?pkgId={{pkg.Id}}">
+                                    <img ng-if="pkg.IconUrl.length > 0" class="img-gallery" ng-src="{{pkg.IconUrl}}" />
+                                    <img ng-if="pkg.IconUrl.length == 0" class="img-gallery" src="../Content/images/blog/pkg.png" />
+                                </a>
+                            </div>
+                            <div class="pull-left item-info-gal">
+                                <a href="#/custom/packages?pkgId={{pkg.Id}}">{{pkg.Title}}</a>
+                                <span class="text-ellipsis">{{pkg.Description}}</span>
+                            </div>
+                        </li>
+                        <li class="list-group-item clearfix" id="tr-gal-spinner">
+                            <div id="div-gal-spinner"><i class="fa fa-spinner fa-spin"></i></div>
+                        </li>
+                    </ul>
+                </div>
                 <div data-ng-if="security.viewErrorMessages" class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">

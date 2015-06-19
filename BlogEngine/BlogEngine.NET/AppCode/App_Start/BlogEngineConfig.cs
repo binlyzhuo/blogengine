@@ -145,7 +145,6 @@ namespace BlogEngine.NET.App_Start
                 .Include("~/admin/controllers/pages.js")
                 .Include("~/admin/controllers/tags.js")
                 .Include("~/admin/controllers/categories.js")
-                .Include("~/admin/controllers/friendlinks.js")
                 .Include("~/admin/controllers/files.js")
                 .Include("~/admin/controllers/comments.js")
                 .Include("~/admin/controllers/users.js")
@@ -240,7 +239,6 @@ namespace BlogEngine.NET.App_Start
             unity.RegisterType<TrashController>();
             unity.RegisterType<TagsController>();
             unity.RegisterType<CategoriesController>();
-            unity.RegisterType<FriendLinksController>();
             unity.RegisterType<CustomFieldsController>();
             unity.RegisterType<UsersController>();
             unity.RegisterType<RolesController>();
@@ -258,7 +256,6 @@ namespace BlogEngine.NET.App_Start
             unity.RegisterType<ITrashRepository, TrashRepository>(new HierarchicalLifetimeManager());
             unity.RegisterType<ITagRepository, TagRepository>(new HierarchicalLifetimeManager());
             unity.RegisterType<ICategoryRepository, CategoryRepository>(new HierarchicalLifetimeManager());
-            unity.RegisterType<IFriendLinkRepository, FriendLinkRepository>(new HierarchicalLifetimeManager());
             unity.RegisterType<ICustomFieldRepository, CustomFieldRepository>(new HierarchicalLifetimeManager());
             unity.RegisterType<IUsersRepository, UsersRepository>(new HierarchicalLifetimeManager());
             unity.RegisterType<IRolesRepository, RolesRepository>(new HierarchicalLifetimeManager());

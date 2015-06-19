@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="Widgets.TextBox.Edit" Codebehind="edit.ascx.cs" %>
 <%@ Import Namespace="BlogEngine.Core" %>
 
-<script type="text/javascript" src="<%=BlogEngine.Core.Utils.RelativeWebRoot %>admin/editors/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="<%=Utils.RelativeWebRoot %>admin/editors/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
 	tinyMCE.init({
 		selector: "#<%=txtText.ClientID %>",

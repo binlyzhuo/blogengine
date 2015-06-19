@@ -198,30 +198,6 @@ namespace BlogEngine.Core.Providers
             return BlogGenerator.CopyTemplateBlogFolder(newBlog.Name, userName, email, password);
         }
 
-        public override void UpdateFriendLink(FriendLink friendlink)
-        {
-
-        }
-
-        public override void InsertFriendLink(FriendLink friendlink)
-        {
-
-        }
-
-        public override void DeleteFriendLink(FriendLink friendlink)
-        {
-
-        }
-
-        public override List<FriendLink> FillFriendLinks(Blog blog)
-        {
-            return null;
-        }
-
-        public override FriendLink SelectFriendLink(Guid id)
-        {
-            return null;
-        }
         #endregion
     }
 }

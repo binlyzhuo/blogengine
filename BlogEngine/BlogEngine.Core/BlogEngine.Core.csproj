@@ -81,10 +81,6 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\..\lib\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\razor\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -92,9 +88,9 @@
     <Reference Include="Microsoft.Web.XmlTransform">
       <HintPath>..\packages\Microsoft.Web.Xdt.2.1.1\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BlogEngine.NET\bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NuGet.Core, Version=2.8.50506.491, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -161,7 +157,6 @@
     <Compile Include="Data\Contracts\ICommentFilterRepository.cs" />
     <Compile Include="Data\Contracts\ICustomFieldRepository.cs" />
     <Compile Include="Data\Contracts\IFileManagerRepository.cs" />
-    <Compile Include="Data\Contracts\IFriendLinkRepository.cs" />
     <Compile Include="Data\Contracts\IRolesRepository.cs" />
     <Compile Include="Data\Contracts\IUsersRepository.cs" />
     <Compile Include="Data\CustomFieldRepository.cs" />
@@ -182,7 +177,6 @@
     <Compile Include="Data\Contracts\ITrashRepository.cs" />
     <Compile Include="Data\CustomFilterRepository.cs" />
     <Compile Include="Data\FileManagerRepository.cs" />
-    <Compile Include="Data\FriendLinkRepository.cs" />
     <Compile Include="Data\LookupsRepository.cs" />
     <Compile Include="Data\Models\Blog.cs" />
     <Compile Include="Data\Models\BlogItem.cs" />
@@ -193,7 +187,6 @@
     <Compile Include="Data\Models\CustomFilter.cs" />
     <Compile Include="Data\Models\Enums.cs" />
     <Compile Include="Data\Models\CustomField.cs" />
-    <Compile Include="Data\Models\FriendLinkItem.cs" />
     <Compile Include="Data\Models\JsonResponse.cs" />
     <Compile Include="Data\Models\Lookups.cs" />
     <Compile Include="Data\Models\Package.cs" />
@@ -229,8 +222,6 @@
     <Compile Include="FileSystem\Image.cs" />
     <Compile Include="FileSystem\FileSystemUtilities.cs" />
     <Compile Include="Data\Models\Settings.cs" />
-    <Compile Include="FriendLink.cs" />
-    <Compile Include="Log.cs" />
     <Compile Include="Notes\QuickNote.cs" />
     <Compile Include="Notes\QuickNotes.cs" />
     <Compile Include="Notes\QuickSetting.cs" />
@@ -402,7 +393,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ping\Ping.cd" />
     <None Include="Service References\GalleryServer\service.edmx" />
   </ItemGroup>
   <ItemGroup>

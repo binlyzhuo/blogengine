@@ -41,10 +41,6 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\..\lib\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.Unity">
       <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
@@ -128,7 +124,6 @@
     <Content Include="Account\Web.Config" />
     <Content Include="admin\admin.master" />
     <Content Include="admin\controllers\commentfilters.js" />
-    <Content Include="admin\controllers\friendlinks.js" />
     <Content Include="admin\controllers\listpager.js" />
     <Content Include="admin\controllers\pings.js" />
     <Content Include="admin\controllers\blogroll.js" />
@@ -236,7 +231,6 @@
     <Content Include="admin\index.cshtml" />
     <Content Include="admin\star-rating.css" />
     <Content Include="admin\views\content\files.html" />
-    <Content Include="admin\views\content\friendlinks.html" />
     <Content Include="admin\views\custom\packages.html" />
     <Content Include="admin\views\settings\controls\blogroll.html" />
     <Content Include="admin\views\settings\comments\filters.html" />
@@ -273,7 +267,6 @@
     <Content Include="admin\editors\tinymce\skins\lightgray\fonts\tinymce.eot" />
     <Content Include="admin\editors\tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <Content Include="admin\editors\tinymce\skins\lightgray\fonts\tinymce.woff" />
-    <Content Include="App_Data\log4net.config" />
     <None Include="App_Data\PublishProfiles\be.pubxml" />
     <None Include="App_Data\PublishProfiles\bespa - FTP.pubxml" />
     <None Include="App_Data\PublishProfiles\bespa - Web Deploy.pubxml" />
@@ -281,6 +274,7 @@
     <Content Include="AppCode\Wlw\wlw.css" />
     <Content Include="App_Data\posts\ec263a41-af90-4bdc-be2e-3b3ade12f6e5.xml" />
     <Content Include="App_Data\labels.txt" />
+    <Content Include="bin\BlogEngine.NET.dll.config" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -546,9 +540,30 @@
     <Content Include="Custom\Controls\Defaults\PostView.ascx" />
     <Content Include="Custom\Media\sample.mp4" />
     <Content Include="Custom\Media\sample.flv" />
+    <Content Include="Custom\Themes\Standard-2014\CommentForm.ascx" />
+    <Content Include="Custom\Themes\Standard-2014\CommentView.ascx" />
+    <Content Include="Custom\Themes\Standard-2014\css\bootstrap.min.css" />
+    <Content Include="Custom\Themes\Standard-2014\css\main.css" />
+    <Content Include="Custom\Themes\Standard-2014\css\responsive.css" />
+    <Content Include="Custom\Themes\Standard-2014\css\rtl.css" />
+    <Content Include="Custom\Themes\Standard-2014\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Custom\Themes\Standard-2014\images\carrow.png" />
+    <Content Include="Custom\Themes\Standard-2014\images\facebook.png" />
+    <Content Include="Custom\Themes\Standard-2014\images\googleplus.png" />
+    <Content Include="Custom\Themes\Standard-2014\images\logo.png" />
+    <Content Include="Custom\Themes\Standard-2014\images\rss.png" />
+    <Content Include="Custom\Themes\Standard-2014\images\sarrow.png" />
+    <Content Include="Custom\Themes\Standard-2014\images\twitter.png" />
+    <Content Include="Custom\Themes\Standard-2014\js\bootstrap.min.js" />
+    <Content Include="Custom\Themes\Standard-2014\newsletter.html" />
+    <Content Include="Custom\Themes\Standard-2014\PostNavigation.ascx" />
+    <Content Include="Custom\Themes\Standard-2014\PostView.ascx" />
+    <Content Include="Custom\Themes\Standard-2014\RelatedPosts.ascx" />
+    <Content Include="Custom\Themes\Standard-2014\theme.png" />
+    <Content Include="Custom\Themes\Standard-2014\theme.xml" />
+    <Content Include="Custom\Themes\Standard-2014\WidgetContainer.ascx" />
     <Content Include="Custom\Themes\Standard\css\styles.css" />
     <Content Include="Custom\Themes\Standard\fonts\fontello.svg" />
-    <Content Include="Custom\Widgets\FriendLink\widget.ascx" />
     <Content Include="Custom\Widgets\Post List\edit.ascx" />
     <Content Include="Custom\Widgets\Post List\widget.ascx" />
     <Content Include="Custom\Widgets\Post List\widget.xml" />
@@ -599,11 +614,14 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Custom\Themes\Standard-2014\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Custom\Themes\Standard-2014\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Custom\Themes\Standard-2014\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Custom\Themes\Standard-2014\site.master" />
     <Content Include="Custom\Themes\Standard\fonts\fontello.eot" />
     <Content Include="Custom\Themes\Standard\fonts\fontello.ttf" />
     <Content Include="Custom\Themes\Standard\fonts\fontello.woff" />
     <Content Include="Custom\Themes\Standard\fonts\Yekan.woff" />
-    <None Include="Properties\PublishProfiles\blog.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1402,7 +1420,17 @@
     <Content Include="Scripts\syntaxhighlighter\syntaxhighlighter.htm" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Custom\Themes\Garland-Revisited\CommentForm.cshtml" />
+    <Content Include="Custom\Themes\Garland-Revisited\CommentView.cshtml" />
+    <Content Include="Custom\Themes\Garland-Revisited\PostNavigation.cshtml" />
+    <Content Include="Custom\Themes\Garland-Revisited\PostView.cshtml" />
+    <Content Include="Custom\Themes\Garland-Revisited\RelatedPosts.cshtml" />
+    <Content Include="Custom\Themes\Garland-Revisited\site.cshtml" />
+    <Content Include="Custom\Themes\Garland-Revisited\WidgetContainer.cshtml" />
+    <Content Include="Custom\Themes\RazorHost\page.cshtml" />
+    <Content Include="Custom\Themes\RazorHost\site.master" />
     <Content Include="Custom\Themes\Standard\site.master" />
+    <Content Include="Custom\Themes\TitaniumX\site.master" />
     <Content Include="Scripts\toastr.min.js.map" />
     <Content Include="Scripts\syntaxhighlighter\syntaxhighlighter.version" />
     <Content Include="Scripts\version.json" />
@@ -1493,9 +1521,7 @@
     <Content Include="App_Data\newsletter.xml" />
     <Content Include="App_Data\packagefiles.xml" />
     <Content Include="App_Data\packages.xml" />
-    <Content Include="App_Data\pages\5d484c1c-d1f1-4be4-938a-f55bf24bf6ba.xml">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="App_Data\pages\5d484c1c-d1f1-4be4-938a-f55bf24bf6ba.xml" />
     <Content Include="App_Data\pingservices.xml" />
     <Content Include="App_Data\profiles\admin.xml" />
     <Content Include="App_Data\rights.xml" />
@@ -1506,6 +1532,32 @@
     <Content Include="App_Data\stopwords.txt" />
     <Content Include="App_Data\users.xml" />
     <Content Include="archive.aspx" />
+    <Content Include="bin\AjaxMin.dll" />
+    <Content Include="bin\BlogEngine.Core.dll" />
+    <Content Include="bin\BlogEngine.Core.pdb" />
+    <Content Include="bin\BlogEngine.Core.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="bin\BlogEngine.NET.dll" />
+    <Content Include="bin\BlogEngine.NET.pdb" />
+    <Content Include="bin\BlogML.dll" />
+    <Content Include="bin\Dynamic.dll" />
+    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\NuGet.Core.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="contact.aspx" />
     <Content Include="Content\app.css" />
     <Content Include="Content\Auto\Global.css" />
@@ -1579,6 +1631,33 @@
     <Content Include="Scripts\mediaelement\silverlightmediaelement.xap" />
     <Content Include="Scripts\textext.js" />
     <Content Include="search.aspx" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\bg-content-left.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\bg-content-right.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\bg-content.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\bg-navigation-item-hover.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\bg-navigation-item.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\bg-navigation.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\bg-tab.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\blockquote.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\blockquote3-img.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\body.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\gradient-inner.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\menu-leaf.gif" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\user-admin.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\images\user-student.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\img\newsletter\bg.jpg" />
+    <Content Include="Custom\Themes\Garland-Revisited\img\newsletter\header.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\img\newsletter\logo.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\newsletter.html" />
+    <Content Include="Custom\Themes\Garland-Revisited\style.css" />
+    <Content Include="Custom\Themes\Garland-Revisited\Theme.png" />
+    <Content Include="Custom\Themes\Garland-Revisited\theme.xml" />
+    <Content Include="Custom\Themes\RazorHost\CommentForm.ascx" />
+    <Content Include="Custom\Themes\RazorHost\CommentView.ascx" />
+    <Content Include="Custom\Themes\RazorHost\PostNavigation.ascx" />
+    <Content Include="Custom\Themes\RazorHost\PostView.ascx" />
+    <Content Include="Custom\Themes\RazorHost\RelatedPosts.ascx" />
+    <Content Include="Custom\Themes\RazorHost\WidgetContainer.ascx" />
     <Content Include="Custom\Themes\Standard\CommentForm.ascx" />
     <Content Include="Custom\Themes\Standard\CommentView.ascx" />
     <Content Include="Custom\Themes\Standard\css\rtl.css" />
@@ -1591,6 +1670,20 @@
     <Content Include="Custom\Themes\Standard\theme.png" />
     <Content Include="Custom\Themes\Standard\theme.xml" />
     <Content Include="Custom\Themes\Standard\WidgetContainer.ascx" />
+    <Content Include="Custom\Themes\TitaniumX\CommentView.ascx" />
+    <Content Include="Custom\Themes\TitaniumX\download.png" />
+    <Content Include="Custom\Themes\TitaniumX\img\contentbg.png" />
+    <Content Include="Custom\Themes\TitaniumX\img\menubg.png" />
+    <Content Include="Custom\Themes\TitaniumX\img\newsletter\bg.jpg" />
+    <Content Include="Custom\Themes\TitaniumX\img\newsletter\header.png" />
+    <Content Include="Custom\Themes\TitaniumX\img\newsletter\logo.png" />
+    <Content Include="Custom\Themes\TitaniumX\img\widgetbg.png" />
+    <Content Include="Custom\Themes\TitaniumX\newsletter.html" />
+    <Content Include="Custom\Themes\TitaniumX\PostView.ascx" />
+    <Content Include="Custom\Themes\TitaniumX\style.css" />
+    <Content Include="Custom\Themes\TitaniumX\theme.png" />
+    <Content Include="Custom\Themes\TitaniumX\theme.xml" />
+    <Content Include="Custom\Themes\TitaniumX\WidgetContainer.ascx" />
     <Content Include="Custom\Controls\CommentView.ascx" />
     <Content Include="Custom\Controls\Defaults\CommentForm.ascx" />
     <Content Include="Custom\Controls\Defaults\PostNavigation.ascx" />
@@ -1656,6 +1749,11 @@
     <Content Include="Custom\Widgets\TextBox\screenshot.png" />
     <Content Include="Custom\Widgets\TextBox\widget.ascx" />
     <Content Include="Custom\Widgets\TextBox\widget.xml" />
+    <Content Include="Custom\Widgets\Twitter\edit.ascx" />
+    <Content Include="Custom\Widgets\Twitter\screenshot.png" />
+    <Content Include="Custom\Widgets\Twitter\twitter.ico" />
+    <Content Include="Custom\Widgets\Twitter\widget.ascx" />
+    <Content Include="Custom\Widgets\Twitter\widget.xml" />
     <Content Include="Custom\Widgets\Visitor info\screenshot.png" />
     <Content Include="Custom\Widgets\Visitor info\widget.ascx" />
     <Content Include="Custom\Widgets\Visitor info\widget.xml" />
@@ -1761,7 +1859,6 @@
     <Compile Include="AppCode\Api\CustomFieldsController.cs" />
     <Compile Include="AppCode\Api\FileManagerController.cs" />
     <Compile Include="AppCode\Api\FileSystemDataStreamProvider.cs" />
-    <Compile Include="AppCode\Api\FriendLinksController.cs" />
     <Compile Include="AppCode\Api\GalleryFeedsController.cs" />
     <Compile Include="AppCode\Api\LogsController.cs" />
     <Compile Include="AppCode\Api\LookupsController.cs" />
@@ -1870,12 +1967,12 @@
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Custom\Widgets\FriendLink\widget.ascx.cs">
-      <DependentUpon>widget.ascx</DependentUpon>
+    <Compile Include="Custom\Themes\Standard-2014\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Custom\Widgets\FriendLink\widget.ascx.designer.cs">
-      <DependentUpon>widget.ascx</DependentUpon>
+    <Compile Include="Custom\Themes\Standard-2014\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
     </Compile>
     <Compile Include="Custom\Widgets\Post List\edit.ascx.cs">
       <DependentUpon>edit.ascx</DependentUpon>
@@ -1941,11 +2038,25 @@
     <Compile Include="search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Custom\Themes\RazorHost\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom\Themes\RazorHost\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
     <Compile Include="Custom\Themes\Standard\site.master.cs">
       <DependentUpon>site.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Custom\Themes\Standard\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Themes\TitaniumX\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom\Themes\TitaniumX\site.master.designer.cs">
       <DependentUpon>site.master</DependentUpon>
     </Compile>
     <Compile Include="Custom\Controls\CommentView.ascx.cs">
@@ -2144,6 +2255,20 @@
     <Compile Include="Custom\Widgets\TextBox\widget.ascx.designer.cs">
       <DependentUpon>widget.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Custom\Widgets\Twitter\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom\Widgets\Twitter\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Widgets\Twitter\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom\Widgets\Twitter\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Custom\Widgets\Visitor info\widget.ascx.cs">
       <DependentUpon>widget.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2180,6 +2305,7 @@
     <Folder Include="App_Data\datastore\extensions\" />
     <Folder Include="App_Data\files\avatars\" />
     <Folder Include="App_Data\packages\SimpleBlog.1.1.0\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
