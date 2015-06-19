@@ -229,6 +229,7 @@
     <Compile Include="FileSystem\Image.cs" />
     <Compile Include="FileSystem\FileSystemUtilities.cs" />
     <Compile Include="Data\Models\Settings.cs" />
+    <Compile Include="FriendLink.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Notes\QuickNote.cs" />
     <Compile Include="Notes\QuickNotes.cs" />

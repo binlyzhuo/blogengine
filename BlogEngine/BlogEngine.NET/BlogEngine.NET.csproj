@@ -128,6 +128,7 @@
     <Content Include="Account\Web.Config" />
     <Content Include="admin\admin.master" />
     <Content Include="admin\controllers\commentfilters.js" />
+    <Content Include="admin\controllers\friendlinks.js" />
     <Content Include="admin\controllers\listpager.js" />
     <Content Include="admin\controllers\pings.js" />
     <Content Include="admin\controllers\blogroll.js" />
@@ -1792,7 +1793,7 @@
     <Compile Include="AppCode\Api\CustomFieldsController.cs" />
     <Compile Include="AppCode\Api\FileManagerController.cs" />
     <Compile Include="AppCode\Api\FileSystemDataStreamProvider.cs" />
-    <Compile Include="AppCode\Api\FriendLinkController.cs" />
+    <Compile Include="AppCode\Api\FriendLinksController.cs" />
     <Compile Include="AppCode\Api\GalleryFeedsController.cs" />
     <Compile Include="AppCode\Api\LogsController.cs" />
     <Compile Include="AppCode\Api\LookupsController.cs" />

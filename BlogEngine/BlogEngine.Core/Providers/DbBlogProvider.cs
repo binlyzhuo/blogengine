@@ -300,6 +300,13 @@ namespace BlogEngine.Core.Providers
             }
         }
 
+        public override void DeleteFriendLink(FriendLink friendlink)
+        {
+
+        }
+
+        
+
         /// <summary>
         /// Deletes a page from the database
         /// </summary>
@@ -510,6 +517,42 @@ namespace BlogEngine.Core.Providers
             }
 
             return categories;
+        }
+
+        public override List<FriendLink> FillFriendLinks(Blog blog)
+        {
+            var friendlinks = new List<FriendLink>();
+
+            using (var conn = this.CreateConnection())
+            {
+                if (conn.HasConnection)
+                {
+                    using (var cmd = conn.CreateTextCommand(string.Format("SELECT LinkGuid,Name,Url,KeyWords,Contact,AddDate,AddUserID FROM {0}FriendLink ", this.tablePrefix)))
+                    {
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), blog.Id.ToString()));
+
+                        using (var rdr = cmd.ExecuteReader())
+                        {
+                            while (rdr.Read())
+                            {
+                                var cat = new FriendLink
+                                {
+                                    Name = rdr.GetString(1),
+                                    Url = rdr.GetString(2),
+                                    KeyWords = rdr.GetString(2),
+                                    
+                                    Id = new Guid(rdr.GetGuid(0).ToString())
+                                };
+
+                                friendlinks.Add(cat);
+                                cat.MarkOld();
+                            }
+                        }
+                    }
+                }
+            }
+
+            return friendlinks;
         }
 
         /// <summary>
@@ -820,6 +863,34 @@ namespace BlogEngine.Core.Providers
                         parms.Add(conn.CreateParameter(FormatParamName("catname"), category.Title));
                         parms.Add(conn.CreateParameter(FormatParamName("description"), category.Description));
                         parms.Add(conn.CreateParameter(FormatParamName("parentid"), (category.Parent == null ? (object)DBNull.Value : category.Parent.ToString())));
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
+        public override void InsertFriendLink(FriendLink friendlink)
+        {
+            var friendlinks = FriendLink.FriendLinks;
+            friendlinks.Add(friendlink);
+            friendlinks.Sort();
+
+            using (var conn = this.CreateConnection())
+            {
+                if (conn.HasConnection)
+                {
+                    var sqlQuery = string.Format("INSERT INTO {0}FriendLink (LinkGuid,Name,Url,KeyWords,Contact,AddDate,AddUserID) VALUES ({1}linkguid,{1}name, {1}url, {1}keywords, {1}adddate, {1}userid)", this.tablePrefix, this.parmPrefix);
+
+                    using (var cmd = conn.CreateTextCommand(sqlQuery))
+                    {
+                        var parms = cmd.Parameters;
+                        parms.Add(conn.CreateParameter(FormatParamName("linkguid"), friendlink.Id));
+                        parms.Add(conn.CreateParameter(FormatParamName("name"), friendlink.Name));
+                        parms.Add(conn.CreateParameter(FormatParamName("url"), friendlink.Url));
+                        parms.Add(conn.CreateParameter(FormatParamName("keywords"), friendlink.KeyWords));
+                        parms.Add(conn.CreateParameter(FormatParamName("adddate"), DateTime.Now));
+                        parms.Add(conn.CreateParameter(FormatParamName("userid"), "0"));
 
                         cmd.ExecuteNonQuery();
                     }
@@ -1360,6 +1431,11 @@ namespace BlogEngine.Core.Providers
 
             category.MarkOld();
             return category;
+        }
+
+        public override FriendLink SelectFriendLink(Guid id)
+        {
+            return null;
         }
 
         /// <summary>
@@ -2208,6 +2284,11 @@ namespace BlogEngine.Core.Providers
                     }
                 }
             }
+        }
+
+        public override void UpdateFriendLink(FriendLink friendlink)
+        {
+
         }
 
         /// <summary>

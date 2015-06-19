@@ -8,5 +8,6 @@ namespace BlogEngine.Core.Data.Contracts
 {
     public interface IFriendLinkRepository
     {
+        Data.Models.FriendLink Add(Data.Models.FriendLink item);
     }
 }

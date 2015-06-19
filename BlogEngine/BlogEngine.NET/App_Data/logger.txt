@@ -1,3 +1,52 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 日期: 2015/6/18 16:01:25
 BlogEngine.Core.Packaging.Load: 无法连接到远程服务器
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 11:21:40
+POST http://localhost:64079/api/friendlinks: An error occurred when trying to create a controller of type 'FriendLinksController'. Make sure that the controller has a parameterless public constructor.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 11:25:10
+POST http://localhost:64079/api/friendlinks: An error occurred when trying to create a controller of type 'FriendLinksController'. Make sure that the controller has a parameterless public constructor.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 11:31:03
+POST http://localhost:64079/api/friendlinks: An error occurred when trying to create a controller of type 'FriendLinksController'. Make sure that the controller has a parameterless public constructor.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 13:45:52
+POST http://localhost:64079/api/friendlinks: An error occurred when trying to create a controller of type 'FriendLinksController'. Make sure that the controller has a parameterless public constructor.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 13:54:43
+POST http://localhost:64079/api/friendlinks: An error occurred when trying to create a controller of type 'FriendLinksController'. Make sure that the controller has a parameterless public constructor.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 13:59:09
+BlogEngine.Core.Packaging.Load: 未能解析此远程名称: 'dnbe.net'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 13:59:09
+POST http://localhost:64079/api/friendlinks: An error occurred when trying to create a controller of type 'FriendLinksController'. Make sure that the controller has a parameterless public constructor.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 13:59:31
+POST http://localhost:64079/api/friendlinks: An error occurred when trying to create a controller of type 'FriendLinksController'. Make sure that the controller has a parameterless public constructor.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 13:59:46
+POST http://localhost:64079/api/friendlinks: An error occurred when trying to create a controller of type 'FriendLinksController'. Make sure that the controller has a parameterless public constructor.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 15:26:52
+POST http://localhost:64079/api/friendlinks: 值不能为 null。
+参数名: source
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 15:28:40
+POST http://localhost:64079/api/friendlinks: 值不能为 null。
+参数名: source
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 15:29:07
+POST http://localhost:64079/api/friendlinks: 值不能为 null。
+参数名: source
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 15:30:26
+POST http://localhost:64079/api/friendlinks: 值不能为 null。
+参数名: source
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 15:53:57
+CategoryRepository.Add: INSERT 语句中列的数目大于 VALUES 子句中指定的值的数目。VALUES 子句中值的数目必须与 INSERT 语句中指定的列的数目匹配。
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+日期: 2015/6/19 15:57:02
+CategoryRepository.Add: INSERT 语句中列的数目大于 VALUES 子句中指定的值的数目。VALUES 子句中值的数目必须与 INSERT 语句中指定的列的数目匹配。
