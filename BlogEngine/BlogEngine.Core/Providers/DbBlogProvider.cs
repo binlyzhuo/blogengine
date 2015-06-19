@@ -519,6 +519,11 @@ namespace BlogEngine.Core.Providers
             return categories;
         }
 
+        /// <summary>
+        /// get friendlinks
+        /// </summary>
+        /// <param name="blog"></param>
+        /// <returns></returns>
         public override List<FriendLink> FillFriendLinks(Blog blog)
         {
             var friendlinks = new List<FriendLink>();
@@ -883,6 +888,10 @@ namespace BlogEngine.Core.Providers
             }
         }
 
+        /// <summary>
+        /// insert blog friendlinks
+        /// </summary>
+        /// <param name="friendlink"></param>
         public override void InsertFriendLink(FriendLink friendlink)
         {
             var friendlinks = FriendLink.FriendLinks;

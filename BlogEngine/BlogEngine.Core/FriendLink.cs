@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace BlogEngine.Core
 {
+    /// <summary>
+    /// 友情链接相关
+    /// </summary>
     public class FriendLink : BusinessBase<FriendLink, Guid>
     {
         #region Constants and Fields
@@ -32,7 +35,7 @@ namespace BlogEngine.Core
 
         private string contact;
 
-       
+        private DateTime addDate;
 
         #endregion
 
@@ -67,7 +70,14 @@ namespace BlogEngine.Core
             this.Id = Guid.NewGuid();
         }
 
-        
+        /// <summary>
+        /// contruct function
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="url"></param>
+        /// <param name="keywords"></param>
+        /// <param name="contact"></param>
+        /// <param name="guid"></param>
         public FriendLink(string name, string url,string keywords,string contact,Guid guid)
         {
             this.Id = guid;
@@ -76,9 +86,7 @@ namespace BlogEngine.Core
             this.keywords = keywords;
             this.contact = contact;
             
-            //this.title = title;
-            //this.description = description;
-            //this.Parent = null;
+            
         }
 
         #endregion
@@ -96,21 +104,19 @@ namespace BlogEngine.Core
                 Blog blog = Blog.CurrentInstance;
                 List<FriendLink> blogFriendLinks;
 
-                //if (!friendlinks.TryGetValue(blog.BlogId, out blogFriendLinks))
-                //{
-                //    lock (SyncRoot)
-                //    {
-                //        //if (!friendlinks.TryGetValue(blog.BlogId, out blogFriendLinks))
-                //        //{
-                //        //    friendlinks[blog.Id] = blogFriendLinks = BlogService.FillFriendLinks(blog);
+                if (!friendlinks.TryGetValue(blog.BlogId, out blogFriendLinks))
+                {
+                    lock (SyncRoot)
+                    {
+                        if (!friendlinks.TryGetValue(blog.BlogId, out blogFriendLinks))
+                        {
+                            friendlinks[blog.Id] = blogFriendLinks = BlogService.FillFriendLinks(blog);
 
-                //        //    if (blogFriendLinks != null)
-                //        //        blogFriendLinks.Sort();
-                //        //}
-                //        friendlinks[blog.Id] = blogFriendLinks = BlogService.FillFriendLinks(blog);
-                //    }
-                //}
-                blogFriendLinks=BlogService.FillFriendLinks(blog);
+                            if (blogFriendLinks != null)
+                                blogFriendLinks.Sort();
+                        }
+                    }
+                }
                 return blogFriendLinks;
             }
         }
@@ -125,7 +131,7 @@ namespace BlogEngine.Core
             {
                 List<Blog> blogs = Blog.Blogs.Where(b => b.IsActive).ToList();
                 Guid originalBlogInstanceIdOverride = Blog.InstanceIdOverride;
-                List<FriendLink> categoriesAcrossAllBlogs = new List<FriendLink>();
+                List<FriendLink> friendlinksAcrossAllBlogs = new List<FriendLink>();
 
                 // Categories are not loaded for a blog instance until that blog
                 // instance is first accessed.  For blog instances where the
@@ -135,20 +141,20 @@ namespace BlogEngine.Core
                 //
                 for (int i = 0; i < blogs.Count; i++)
                 {
-                    List<FriendLink> blogCategories;
-                    if (!friendlinks.TryGetValue(blogs[i].Id, out blogCategories))
+                    List<FriendLink> blogFriendLinks;
+                    if (!friendlinks.TryGetValue(blogs[i].Id, out blogFriendLinks))
                     {
                         // temporarily override the Current BlogId to the
                         // blog Id we need categories to be loaded for.
                         Blog.InstanceIdOverride = blogs[i].Id;
-                        blogCategories = FriendLinks;
+                        blogFriendLinks = FriendLinks;
                         Blog.InstanceIdOverride = originalBlogInstanceIdOverride;
                     }
 
-                    categoriesAcrossAllBlogs.AddRange(blogCategories);
+                    friendlinksAcrossAllBlogs.AddRange(blogFriendLinks);
                 }
 
-                return categoriesAcrossAllBlogs;
+                return friendlinksAcrossAllBlogs;
             }
         }
 
@@ -194,7 +200,18 @@ namespace BlogEngine.Core
             }
         }
 
-        
+        public DateTime AddDate
+        {
+            get
+            {
+                return this.addDate;
+            }
+            set
+            {
+                base.SetValue("AddDate", value, ref this.addDate);
+            }
+        }
+
         /// <summary>
         ///     Gets or sets the Parent ID of the object
         /// </summary>
@@ -212,6 +229,9 @@ namespace BlogEngine.Core
             }
         }
 
+        /// <summary>
+        /// site contact
+        /// </summary>
         public string Contact
         {
             get
@@ -346,7 +366,11 @@ namespace BlogEngine.Core
         /// </summary>
         protected override void ValidationRules()
         {
-            this.AddRule("Title", "Title must be set", string.IsNullOrEmpty(this.Url));
+            this.AddRule("Name", "Name must be set", string.IsNullOrEmpty(this.Name));
+            this.AddRule("URL", "URL must be set", string.IsNullOrEmpty(this.Url));
+            this.AddRule("KeyWords", "KeyWords must be set", string.IsNullOrEmpty(this.KeyWords));
+            this.AddRule("Contact", "Contact must be set", string.IsNullOrEmpty(this.Contact));
+            
         }
 
         #endregion

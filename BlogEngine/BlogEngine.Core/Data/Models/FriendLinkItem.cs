@@ -18,5 +18,9 @@ namespace BlogEngine.Core.Data.Models
 
         public int AddUserID { set; get; }
         public Guid LinkGuid { set; get; }
+
+        public bool IsChecked { get; set; }
+
+        public Guid Id { get; set; }
     }
 }

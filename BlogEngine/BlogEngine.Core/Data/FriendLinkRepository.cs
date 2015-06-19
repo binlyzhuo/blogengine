@@ -49,5 +49,10 @@ namespace BlogEngine.Core.Data
                 return null;
             }
         }
+
+        public bool Remove(Guid id)
+        {
+            return false;
+        }
     }
 }

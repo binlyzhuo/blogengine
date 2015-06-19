@@ -29,4 +29,25 @@ public class FriendLinksController : ApiController
 
         return Request.CreateResponse(HttpStatusCode.Created, item);
     }
+
+    [HttpPut]
+    public HttpResponseMessage ProcessChecked([FromBody]List<FriendLinkItem> items)
+    {
+        if (items == null || items.Count == 0)
+            throw new HttpResponseException(HttpStatusCode.ExpectationFailed);
+
+        var action = Request.GetRouteData().Values["id"].ToString();
+
+        if (action.ToLower() == "delete")
+        {
+            foreach (var item in items)
+            {
+                if (item.IsChecked)
+                {
+                    //repository.Remove(item.Id);
+                }
+            }
+        }
+        return Request.CreateResponse(HttpStatusCode.OK);
+    }
 }

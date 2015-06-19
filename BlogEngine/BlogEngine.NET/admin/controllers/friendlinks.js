@@ -39,7 +39,6 @@
     $scope.save = function () {
 
         if (!$('#form').valid()) {
-            alert('f');
             return false;
         }
         //================
@@ -55,14 +54,22 @@
     }
 
     $scope.processChecked = function (action) {
-
+        processChecked("/api/friendlinks/processchecked/", action, $scope, dataService);
     }
 
     $scope.clear = function () {
-
+        $scope.category = { "Id": null,"Name": "", "Url": "", "Keywords": "","Contact2":"" };
+        $scope.id = null;
     }
 
     $(document).ready(function () {
-
+        $('#form').validate({
+            rules: {
+                txtName: { required: true },
+                txtUrl: { required: true },
+                txtKeywords: { required: true },
+                txtContact: { required: true }
+            }
+        });
     });
 }]);
