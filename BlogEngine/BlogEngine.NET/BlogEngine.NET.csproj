@@ -235,6 +235,7 @@
     <Content Include="admin\index.cshtml" />
     <Content Include="admin\star-rating.css" />
     <Content Include="admin\views\content\files.html" />
+    <Content Include="admin\views\content\friendlinks.html" />
     <Content Include="admin\views\custom\packages.html" />
     <Content Include="admin\views\settings\controls\blogroll.html" />
     <Content Include="admin\views\settings\comments\filters.html" />
