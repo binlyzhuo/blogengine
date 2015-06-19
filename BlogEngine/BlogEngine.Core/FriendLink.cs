@@ -68,9 +68,9 @@ namespace BlogEngine.Core
         }
 
         
-        public FriendLink(string name, string url,string keywords,string contact)
+        public FriendLink(string name, string url,string keywords,string contact,Guid guid)
         {
-            this.Id = Guid.NewGuid();
+            this.Id = guid;
             this.name = name;
             this.url = url;
             this.keywords = keywords;
@@ -96,20 +96,21 @@ namespace BlogEngine.Core
                 Blog blog = Blog.CurrentInstance;
                 List<FriendLink> blogFriendLinks;
 
-                if (!friendlinks.TryGetValue(blog.BlogId, out blogFriendLinks))
-                {
-                    lock (SyncRoot)
-                    {
-                        if (!friendlinks.TryGetValue(blog.BlogId, out blogFriendLinks))
-                        {
-                            friendlinks[blog.Id] = blogFriendLinks = BlogService.FillFriendLinks(blog);
+                //if (!friendlinks.TryGetValue(blog.BlogId, out blogFriendLinks))
+                //{
+                //    lock (SyncRoot)
+                //    {
+                //        //if (!friendlinks.TryGetValue(blog.BlogId, out blogFriendLinks))
+                //        //{
+                //        //    friendlinks[blog.Id] = blogFriendLinks = BlogService.FillFriendLinks(blog);
 
-                            if (blogFriendLinks != null)
-                                blogFriendLinks.Sort();
-                        }
-                    }
-                }
-
+                //        //    if (blogFriendLinks != null)
+                //        //        blogFriendLinks.Sort();
+                //        //}
+                //        friendlinks[blog.Id] = blogFriendLinks = BlogService.FillFriendLinks(blog);
+                //    }
+                //}
+                blogFriendLinks=BlogService.FillFriendLinks(blog);
                 return blogFriendLinks;
             }
         }

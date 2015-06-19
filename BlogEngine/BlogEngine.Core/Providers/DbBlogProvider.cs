@@ -529,23 +529,36 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand(string.Format("SELECT LinkGuid,Name,Url,KeyWords,Contact,AddDate,AddUserID FROM {0}FriendLink ", this.tablePrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), blog.Id.ToString()));
+                        //cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), blog.Id.ToString()));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
                             while (rdr.Read())
                             {
-                                var cat = new FriendLink
+                                Guid guid = Guid.Parse(rdr.GetString(0));
+                                string name = rdr.GetString(1);
+                                string url = rdr.GetString(2);
+                                string keywords = rdr.GetString(3);
+                                string contact = rdr.GetString(4);
+                                try
                                 {
-                                    Name = rdr.GetString(1),
-                                    Url = rdr.GetString(2),
-                                    KeyWords = rdr.GetString(2),
+                                    var cat = new FriendLink(name,url,keywords,contact,guid);
+                                    friendlinks.Add(cat);
+                                    cat.MarkOld();
+                                }
+                                catch(Exception ex)
+                                {
+                                    continue;
+                                }
+                                //{
+                                //    Name = rdr.GetString(1),
+                                //    Url = rdr.GetString(2),
+                                //    KeyWords = rdr.GetString(3),
+                                //    Contact = rdr.GetString(4),
                                     
-                                    Id = new Guid(rdr.GetGuid(0).ToString())
-                                };
+                                //};
 
-                                friendlinks.Add(cat);
-                                cat.MarkOld();
+                                
                             }
                         }
                     }

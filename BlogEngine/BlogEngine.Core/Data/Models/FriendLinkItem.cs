@@ -17,5 +17,6 @@ namespace BlogEngine.Core.Data.Models
         public DateTime AddDate { set; get; }
 
         public int AddUserID { set; get; }
+        public Guid LinkGuid { set; get; }
     }
 }

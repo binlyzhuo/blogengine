@@ -65,8 +65,8 @@
         <table class="table table-bordered table-striped table-hover table-responsive">
             <thead>
                 <tr>
-                    <th><input type="checkbox" id="chkAll" ng-click="checkAll($event)" /></th>
-                    <th class="table-item-title table-item-w70">{{lbl.title}} <a data-ng-click="sort_by('Title',$event)"><i class="fa fa-sort"></i></a></th>
+                    
+                    <th class="hmax479">{{lbl.title}}</th>
                     <th class="hmax479">{{lbl.description}}</th>
                     <th>{{lbl.count}}</th>
                     <th class="hmax479">{{lbl.parent}}</th>
@@ -74,14 +74,14 @@
             </thead>
             <tbody>
                 <tr data-ng-repeat="item in pagedItems[currentPage] | orderBy:sortingOrder:reverse">
-                    <td><input type="checkbox" id="{{item.Slug}}" ng-model="item.IsChecked" /></td>
+                    
                     <td class="table-item-title">
                         <a href="{{SiteVars.RelativeWebRoot}}admin/#/content/categories/?id={{item.Id}}" class="text-ellipsis pull-left">{{item.Title}}</a>
-                        <a title="{{item.Title}}" class="external-link pull-right" target="_blank" href="{{SiteVars.RelativeWebRoot}}category/{{item.Title}}"><i class="fa fa-external-link"></i></a>
+                        <a title="{{item.Name}}" class="external-link pull-right" target="_blank" href="{{SiteVars.RelativeWebRoot}}category/{{item.Name}}">{{item.Name}}</a>
                     </td>
-                    <td class="hmax479" title="{{item.Description}}"><span class="text-ellipsis-sm text-ellipsis">{{item.Description}}</span></td>
-                    <td>{{item.Count}}</td>
-                    <td class="hmax479">{{item.Parent.OptionName}}</td>
+                    <td class="hmax479" title="{{item.Url}}"><span class="text-ellipsis-sm text-ellipsis">{{item.Url}}</span></td>
+                    <td>{{item.KeyWords}}</td>
+                    <td class="hmax479">{{item.Contact}}</td>
                 </tr>
                 <tr id="tr-spinner"><td colspan="5"><div id="div-spinner"><i class="fa fa-spinner fa-spin"></i></div></td></tr>
             </tbody>

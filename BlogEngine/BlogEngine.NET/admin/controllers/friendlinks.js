@@ -18,7 +18,20 @@
     }
 
     $scope.load = function () {
+        dataService.getItems('/api/lookups')
+            .success(function (data) { angular.copy(data, $scope.lookups); })
+            .error(function () { toastr.error("Error loading lookups"); });
 
+        var p = { skip: 0, take: 0 };
+        dataService.getItems('/api/friendlinks', p)
+            .success(function (data) {
+                angular.copy(data, $scope.items);
+                gridInit($scope, $filter);
+                rowSpinOff($scope.items);
+            })
+            .error(function () {
+                toastr.error($rootScope.lbl.errorLoadingCategories);
+            });
     }
 
     $scope.load();

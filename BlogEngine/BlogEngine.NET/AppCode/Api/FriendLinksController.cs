@@ -16,6 +16,11 @@ public class FriendLinksController : ApiController
         this.repository = repository;
     }
 
+    public IEnumerable<FriendLinkItem> Get(int take = 10, int skip = 0, string filter = "", string order = "")
+    {
+        return repository.Find(take, skip, filter, order);
+    }
+
     public HttpResponseMessage Post([FromBody]FriendLinkItem item)
     {
         var result = repository.Add(item);

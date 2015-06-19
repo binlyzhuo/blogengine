@@ -31,5 +31,7 @@ namespace BlogEngine.Core.Data.Models
         /// List of installed themes
         /// </summary>
         public IEnumerable<SelectOption> InstalledThemes { get; set; }
+
+        public IEnumerable<SelectOption> FriendLinks { set; get; }
     }
 }
