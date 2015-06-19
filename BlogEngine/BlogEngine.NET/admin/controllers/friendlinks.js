@@ -42,7 +42,6 @@
             alert('f');
             return false;
         }
-        alert('true');
         //================
         dataService.addItem("/api/friendlinks", $scope.link)
            .success(function (data) {
@@ -51,7 +50,8 @@
            .error(function (data) { toastr.error(data); });
 
         ///====================
-
+        $("#modal-add-cat").modal('hide');
+        $scope.focusInput = false;
     }
 
     $scope.processChecked = function (action) {

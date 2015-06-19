@@ -281,7 +281,6 @@
     <Content Include="AppCode\Wlw\wlw.css" />
     <Content Include="App_Data\posts\ec263a41-af90-4bdc-be2e-3b3ade12f6e5.xml" />
     <Content Include="App_Data\labels.txt" />
-    <Content Include="bin\BlogEngine.NET.dll.config" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -1507,32 +1506,6 @@
     <Content Include="App_Data\stopwords.txt" />
     <Content Include="App_Data\users.xml" />
     <Content Include="archive.aspx" />
-    <Content Include="bin\AjaxMin.dll" />
-    <Content Include="bin\BlogEngine.Core.dll" />
-    <Content Include="bin\BlogEngine.Core.pdb" />
-    <Content Include="bin\BlogEngine.Core.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="bin\BlogEngine.NET.dll" />
-    <Content Include="bin\BlogEngine.NET.pdb" />
-    <Content Include="bin\BlogML.dll" />
-    <Content Include="bin\Dynamic.dll" />
-    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
-    <Content Include="bin\Microsoft.Practices.Unity.Configuration.dll" />
-    <Content Include="bin\Microsoft.Practices.Unity.dll" />
-    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
-    <Content Include="bin\Newtonsoft.Json.dll" />
-    <Content Include="bin\NuGet.Core.dll" />
-    <Content Include="bin\System.Net.Http.Formatting.dll" />
-    <Content Include="bin\System.Web.Helpers.dll" />
-    <Content Include="bin\System.Web.Http.dll" />
-    <Content Include="bin\System.Web.Http.WebHost.dll" />
-    <Content Include="bin\System.Web.Optimization.dll" />
-    <Content Include="bin\System.Web.Razor.dll" />
-    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
-    <Content Include="bin\System.Web.WebPages.dll" />
-    <Content Include="bin\System.Web.WebPages.Razor.dll" />
-    <Content Include="bin\WebGrease.dll" />
     <Content Include="contact.aspx" />
     <Content Include="Content\app.css" />
     <Content Include="Content\Auto\Global.css" />
