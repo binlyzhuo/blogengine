@@ -16,10 +16,10 @@ namespace BlogEngine.Core.Data
             {
                 return new FriendLinkItem()
                 {
-                    Contact2 = u.Contact,
+                    LinkMan = u.Contact,
                     Keywords = u.KeyWords,
                     Name = u.Name,
-                    LinkGuid = u.Id,
+                    ID = u.Id,
                     Url = u.Url
                 };
             });
@@ -37,7 +37,7 @@ namespace BlogEngine.Core.Data
 
             try
             {
-                var newItem = new FriendLink(item.Name, item.Url, item.Keywords, item.Contact2,Guid.NewGuid());
+                var newItem = new FriendLink(item.Name, item.Url, item.Keywords, item.LinkMan,Guid.NewGuid());
 
 
                 newItem.Save();
