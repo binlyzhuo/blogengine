@@ -1792,6 +1792,7 @@
     <Compile Include="AppCode\Api\CustomFieldsController.cs" />
     <Compile Include="AppCode\Api\FileManagerController.cs" />
     <Compile Include="AppCode\Api\FileSystemDataStreamProvider.cs" />
+    <Compile Include="AppCode\Api\FriendLinkController.cs" />
     <Compile Include="AppCode\Api\GalleryFeedsController.cs" />
     <Compile Include="AppCode\Api\LogsController.cs" />
     <Compile Include="AppCode\Api\LookupsController.cs" />
