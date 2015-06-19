@@ -91,6 +91,7 @@ namespace Widgets.LinkList
                         if (node.Attributes["title"] != null)
                         {
                             a.InnerText = node.Attributes["title"].InnerText;
+                            a.Title = node.Attributes["title"].InnerText;
                         }
 
                         if (node.Attributes["newwindow"] != null &&
