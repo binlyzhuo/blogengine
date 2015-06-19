@@ -9,7 +9,7 @@ namespace BlogEngine.Core.Data
 {
     public class FriendLinkRepository : IFriendLinkRepository
     {
-        public Data.Models.FriendLink Add(Data.Models.FriendLink item)
+        public Data.Models.FriendLinkItem Add(Data.Models.FriendLinkItem item)
         {
             if (!Security.IsAuthorizedTo(BlogEngine.Core.Rights.CreateNewPosts))
                 throw new System.UnauthorizedAccessException();
@@ -20,7 +20,7 @@ namespace BlogEngine.Core.Data
 
             try
             {
-                var newItem = new FriendLink(item.Name,item.Url,item.Keywords,item.Contact);
+                var newItem = new FriendLink(item.Name,item.Url,item.Keywords,item.Contact2);
 
 
                 newItem.Save();

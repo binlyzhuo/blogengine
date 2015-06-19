@@ -193,7 +193,7 @@
     <Compile Include="Data\Models\CustomFilter.cs" />
     <Compile Include="Data\Models\Enums.cs" />
     <Compile Include="Data\Models\CustomField.cs" />
-    <Compile Include="Data\Models\FriendLink.cs" />
+    <Compile Include="Data\Models\FriendLinkItem.cs" />
     <Compile Include="Data\Models\JsonResponse.cs" />
     <Compile Include="Data\Models\Lookups.cs" />
     <Compile Include="Data\Models\Package.cs" />

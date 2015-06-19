@@ -16,7 +16,7 @@ public class FriendLinksController : ApiController
         this.repository = repository;
     }
 
-    public HttpResponseMessage Post([FromBody]FriendLink item)
+    public HttpResponseMessage Post([FromBody]FriendLinkItem item)
     {
         var result = repository.Add(item);
         //if (result == null)

@@ -874,13 +874,13 @@ namespace BlogEngine.Core.Providers
         {
             var friendlinks = FriendLink.FriendLinks;
             friendlinks.Add(friendlink);
-            friendlinks.Sort();
+            //friendlinks.Sort();
 
             using (var conn = this.CreateConnection())
             {
                 if (conn.HasConnection)
                 {
-                    var sqlQuery = string.Format("INSERT INTO {0}FriendLink (LinkGuid,Name,Url,KeyWords,Contact,AddDate,AddUserID) VALUES ({1}linkguid,{1}name, {1}url, {1}keywords, {1}adddate, {1}userid)", this.tablePrefix, this.parmPrefix);
+                    var sqlQuery = string.Format("INSERT INTO {0}FriendLink (LinkGuid,Name,Url,KeyWords,Contact,AddDate,AddUserID) VALUES ({1}linkguid,{1}name, {1}url, {1}keywords,{1}contact, {1}adddate, {1}userid)", this.tablePrefix, this.parmPrefix);
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
@@ -889,10 +889,11 @@ namespace BlogEngine.Core.Providers
                         parms.Add(conn.CreateParameter(FormatParamName("name"), friendlink.Name));
                         parms.Add(conn.CreateParameter(FormatParamName("url"), friendlink.Url));
                         parms.Add(conn.CreateParameter(FormatParamName("keywords"), friendlink.KeyWords));
+                        parms.Add(conn.CreateParameter(FormatParamName("contact"), friendlink.Contact));
                         parms.Add(conn.CreateParameter(FormatParamName("adddate"), DateTime.Now));
                         parms.Add(conn.CreateParameter(FormatParamName("userid"), "0"));
 
-                        cmd.ExecuteNonQuery();
+                        int result=cmd.ExecuteNonQuery();
                     }
                 }
             }

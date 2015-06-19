@@ -1683,11 +1683,6 @@
     <Content Include="Custom\Widgets\TextBox\screenshot.png" />
     <Content Include="Custom\Widgets\TextBox\widget.ascx" />
     <Content Include="Custom\Widgets\TextBox\widget.xml" />
-    <Content Include="Custom\Widgets\Twitter\edit.ascx" />
-    <Content Include="Custom\Widgets\Twitter\screenshot.png" />
-    <Content Include="Custom\Widgets\Twitter\twitter.ico" />
-    <Content Include="Custom\Widgets\Twitter\widget.ascx" />
-    <Content Include="Custom\Widgets\Twitter\widget.xml" />
     <Content Include="Custom\Widgets\Visitor info\screenshot.png" />
     <Content Include="Custom\Widgets\Visitor info\widget.ascx" />
     <Content Include="Custom\Widgets\Visitor info\widget.xml" />
@@ -2174,20 +2169,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Custom\Widgets\TextBox\widget.ascx.designer.cs">
-      <DependentUpon>widget.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Custom\Widgets\Twitter\edit.ascx.cs">
-      <DependentUpon>edit.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Custom\Widgets\Twitter\edit.ascx.designer.cs">
-      <DependentUpon>edit.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Custom\Widgets\Twitter\widget.ascx.cs">
-      <DependentUpon>widget.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Custom\Widgets\Twitter\widget.ascx.designer.cs">
       <DependentUpon>widget.ascx</DependentUpon>
     </Compile>
     <Compile Include="Custom\Widgets\Visitor info\widget.ascx.cs">
