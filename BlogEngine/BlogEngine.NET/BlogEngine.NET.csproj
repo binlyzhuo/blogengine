@@ -540,28 +540,6 @@
     <Content Include="Custom\Controls\Defaults\PostView.ascx" />
     <Content Include="Custom\Media\sample.mp4" />
     <Content Include="Custom\Media\sample.flv" />
-    <Content Include="Custom\Themes\Standard-2014\CommentForm.ascx" />
-    <Content Include="Custom\Themes\Standard-2014\CommentView.ascx" />
-    <Content Include="Custom\Themes\Standard-2014\css\bootstrap.min.css" />
-    <Content Include="Custom\Themes\Standard-2014\css\main.css" />
-    <Content Include="Custom\Themes\Standard-2014\css\responsive.css" />
-    <Content Include="Custom\Themes\Standard-2014\css\rtl.css" />
-    <Content Include="Custom\Themes\Standard-2014\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Custom\Themes\Standard-2014\images\carrow.png" />
-    <Content Include="Custom\Themes\Standard-2014\images\facebook.png" />
-    <Content Include="Custom\Themes\Standard-2014\images\googleplus.png" />
-    <Content Include="Custom\Themes\Standard-2014\images\logo.png" />
-    <Content Include="Custom\Themes\Standard-2014\images\rss.png" />
-    <Content Include="Custom\Themes\Standard-2014\images\sarrow.png" />
-    <Content Include="Custom\Themes\Standard-2014\images\twitter.png" />
-    <Content Include="Custom\Themes\Standard-2014\js\bootstrap.min.js" />
-    <Content Include="Custom\Themes\Standard-2014\newsletter.html" />
-    <Content Include="Custom\Themes\Standard-2014\PostNavigation.ascx" />
-    <Content Include="Custom\Themes\Standard-2014\PostView.ascx" />
-    <Content Include="Custom\Themes\Standard-2014\RelatedPosts.ascx" />
-    <Content Include="Custom\Themes\Standard-2014\theme.png" />
-    <Content Include="Custom\Themes\Standard-2014\theme.xml" />
-    <Content Include="Custom\Themes\Standard-2014\WidgetContainer.ascx" />
     <Content Include="Custom\Themes\Standard\css\styles.css" />
     <Content Include="Custom\Themes\Standard\fonts\fontello.svg" />
     <Content Include="Custom\Widgets\Post List\edit.ascx" />
@@ -614,14 +592,11 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Custom\Themes\Standard-2014\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Custom\Themes\Standard-2014\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Custom\Themes\Standard-2014\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Custom\Themes\Standard-2014\site.master" />
     <Content Include="Custom\Themes\Standard\fonts\fontello.eot" />
     <Content Include="Custom\Themes\Standard\fonts\fontello.ttf" />
     <Content Include="Custom\Themes\Standard\fonts\fontello.woff" />
     <Content Include="Custom\Themes\Standard\fonts\Yekan.woff" />
+    <None Include="Properties\PublishProfiles\blog.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1420,17 +1395,7 @@
     <Content Include="Scripts\syntaxhighlighter\syntaxhighlighter.htm" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
-    <Content Include="Custom\Themes\Garland-Revisited\CommentForm.cshtml" />
-    <Content Include="Custom\Themes\Garland-Revisited\CommentView.cshtml" />
-    <Content Include="Custom\Themes\Garland-Revisited\PostNavigation.cshtml" />
-    <Content Include="Custom\Themes\Garland-Revisited\PostView.cshtml" />
-    <Content Include="Custom\Themes\Garland-Revisited\RelatedPosts.cshtml" />
-    <Content Include="Custom\Themes\Garland-Revisited\site.cshtml" />
-    <Content Include="Custom\Themes\Garland-Revisited\WidgetContainer.cshtml" />
-    <Content Include="Custom\Themes\RazorHost\page.cshtml" />
-    <Content Include="Custom\Themes\RazorHost\site.master" />
     <Content Include="Custom\Themes\Standard\site.master" />
-    <Content Include="Custom\Themes\TitaniumX\site.master" />
     <Content Include="Scripts\toastr.min.js.map" />
     <Content Include="Scripts\syntaxhighlighter\syntaxhighlighter.version" />
     <Content Include="Scripts\version.json" />
@@ -1631,33 +1596,6 @@
     <Content Include="Scripts\mediaelement\silverlightmediaelement.xap" />
     <Content Include="Scripts\textext.js" />
     <Content Include="search.aspx" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\bg-content-left.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\bg-content-right.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\bg-content.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\bg-navigation-item-hover.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\bg-navigation-item.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\bg-navigation.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\bg-tab.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\blockquote.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\blockquote3-img.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\body.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\gradient-inner.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\menu-leaf.gif" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\user-admin.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\images\user-student.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\img\newsletter\bg.jpg" />
-    <Content Include="Custom\Themes\Garland-Revisited\img\newsletter\header.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\img\newsletter\logo.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\newsletter.html" />
-    <Content Include="Custom\Themes\Garland-Revisited\style.css" />
-    <Content Include="Custom\Themes\Garland-Revisited\Theme.png" />
-    <Content Include="Custom\Themes\Garland-Revisited\theme.xml" />
-    <Content Include="Custom\Themes\RazorHost\CommentForm.ascx" />
-    <Content Include="Custom\Themes\RazorHost\CommentView.ascx" />
-    <Content Include="Custom\Themes\RazorHost\PostNavigation.ascx" />
-    <Content Include="Custom\Themes\RazorHost\PostView.ascx" />
-    <Content Include="Custom\Themes\RazorHost\RelatedPosts.ascx" />
-    <Content Include="Custom\Themes\RazorHost\WidgetContainer.ascx" />
     <Content Include="Custom\Themes\Standard\CommentForm.ascx" />
     <Content Include="Custom\Themes\Standard\CommentView.ascx" />
     <Content Include="Custom\Themes\Standard\css\rtl.css" />
@@ -1670,20 +1608,6 @@
     <Content Include="Custom\Themes\Standard\theme.png" />
     <Content Include="Custom\Themes\Standard\theme.xml" />
     <Content Include="Custom\Themes\Standard\WidgetContainer.ascx" />
-    <Content Include="Custom\Themes\TitaniumX\CommentView.ascx" />
-    <Content Include="Custom\Themes\TitaniumX\download.png" />
-    <Content Include="Custom\Themes\TitaniumX\img\contentbg.png" />
-    <Content Include="Custom\Themes\TitaniumX\img\menubg.png" />
-    <Content Include="Custom\Themes\TitaniumX\img\newsletter\bg.jpg" />
-    <Content Include="Custom\Themes\TitaniumX\img\newsletter\header.png" />
-    <Content Include="Custom\Themes\TitaniumX\img\newsletter\logo.png" />
-    <Content Include="Custom\Themes\TitaniumX\img\widgetbg.png" />
-    <Content Include="Custom\Themes\TitaniumX\newsletter.html" />
-    <Content Include="Custom\Themes\TitaniumX\PostView.ascx" />
-    <Content Include="Custom\Themes\TitaniumX\style.css" />
-    <Content Include="Custom\Themes\TitaniumX\theme.png" />
-    <Content Include="Custom\Themes\TitaniumX\theme.xml" />
-    <Content Include="Custom\Themes\TitaniumX\WidgetContainer.ascx" />
     <Content Include="Custom\Controls\CommentView.ascx" />
     <Content Include="Custom\Controls\Defaults\CommentForm.ascx" />
     <Content Include="Custom\Controls\Defaults\PostNavigation.ascx" />
@@ -1749,11 +1673,6 @@
     <Content Include="Custom\Widgets\TextBox\screenshot.png" />
     <Content Include="Custom\Widgets\TextBox\widget.ascx" />
     <Content Include="Custom\Widgets\TextBox\widget.xml" />
-    <Content Include="Custom\Widgets\Twitter\edit.ascx" />
-    <Content Include="Custom\Widgets\Twitter\screenshot.png" />
-    <Content Include="Custom\Widgets\Twitter\twitter.ico" />
-    <Content Include="Custom\Widgets\Twitter\widget.ascx" />
-    <Content Include="Custom\Widgets\Twitter\widget.xml" />
     <Content Include="Custom\Widgets\Visitor info\screenshot.png" />
     <Content Include="Custom\Widgets\Visitor info\widget.ascx" />
     <Content Include="Custom\Widgets\Visitor info\widget.xml" />
@@ -1967,13 +1886,6 @@
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Custom\Themes\Standard-2014\site.master.cs">
-      <DependentUpon>site.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Custom\Themes\Standard-2014\site.master.designer.cs">
-      <DependentUpon>site.master</DependentUpon>
-    </Compile>
     <Compile Include="Custom\Widgets\Post List\edit.ascx.cs">
       <DependentUpon>edit.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2038,25 +1950,11 @@
     <Compile Include="search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Custom\Themes\RazorHost\site.master.cs">
-      <DependentUpon>site.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Custom\Themes\RazorHost\site.master.designer.cs">
-      <DependentUpon>site.master</DependentUpon>
-    </Compile>
     <Compile Include="Custom\Themes\Standard\site.master.cs">
       <DependentUpon>site.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Custom\Themes\Standard\site.master.designer.cs">
-      <DependentUpon>site.master</DependentUpon>
-    </Compile>
-    <Compile Include="Custom\Themes\TitaniumX\site.master.cs">
-      <DependentUpon>site.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Custom\Themes\TitaniumX\site.master.designer.cs">
       <DependentUpon>site.master</DependentUpon>
     </Compile>
     <Compile Include="Custom\Controls\CommentView.ascx.cs">
@@ -2255,20 +2153,6 @@
     <Compile Include="Custom\Widgets\TextBox\widget.ascx.designer.cs">
       <DependentUpon>widget.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Custom\Widgets\Twitter\edit.ascx.cs">
-      <DependentUpon>edit.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Custom\Widgets\Twitter\edit.ascx.designer.cs">
-      <DependentUpon>edit.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Custom\Widgets\Twitter\widget.ascx.cs">
-      <DependentUpon>widget.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Custom\Widgets\Twitter\widget.ascx.designer.cs">
-      <DependentUpon>widget.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Custom\Widgets\Visitor info\widget.ascx.cs">
       <DependentUpon>widget.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2305,7 +2189,6 @@
     <Folder Include="App_Data\datastore\extensions\" />
     <Folder Include="App_Data\files\avatars\" />
     <Folder Include="App_Data\packages\SimpleBlog.1.1.0\" />
-    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

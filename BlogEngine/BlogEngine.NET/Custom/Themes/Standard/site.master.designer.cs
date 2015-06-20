@@ -21,15 +21,6 @@ public partial class StandardSite {
     protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
     
     /// <summary>
-    /// MobileThemeSwitch1 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::App_Code.Controls.MobileThemeSwitch MobileThemeSwitch1;
-    
-    /// <summary>
     /// aLogin control.
     /// </summary>
     /// <remarks>
@@ -64,13 +55,4 @@ public partial class StandardSite {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::App_Code.Controls.WidgetZone WidgetZone1;
-    
-    /// <summary>
-    /// WidgetZone2 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::App_Code.Controls.WidgetZone WidgetZone2;
 }
